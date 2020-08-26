@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles/output.css" />
+  <title>Online Education - Landing Page</title>
+</head>
+<style>
+  @media only screen and (max-width: 1024px) {
+    .nav {
+      max-height: 0;
+      visibility: hidden;
+      transition: all 1s ease-in-out;
+    }
+
+    .show {
+      visibility: visible;
+      max-height: 500px;
+      transition: all 1s ease-in-out;
+    }
+  }
+
+  .card {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+  }
+
+  .banner {
+    height: 86vh;
+  }
+
+  .btn {
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+
+<body>
+  <div id="toggle" class="flex flex-col absolute right-0 m-5 cursor-pointer lg:invisible">
+    <div class="w-6 h-1 bg-black mb-1"></div>
+    <div class="w-5 h-1 bg-black mb-1"></div>
+    <div class="w-4 h-1 bg-black mb-1"></div>
+  </div>
+
+  <nav class="flex lg:flex-row flex-col lg:justify-between p-4 select-none">
+    <div class="flex text-2xl text-indigo-800 w-1/5">W/e-Learn</div>
+    <div id="nav" class="nav flex flex-col lg:justify-between items-center lg:flex-row lg:w-5/6">
+      <ul class="flex items-center text-center flex-col lg:flex-row text-gray-700">
+        <li class="mx-4 mb-3 w-full transition duration-300 ease-in-out hover:bg-teal-300 p-2 rounded-lg"><a
+            href="">Home</a>
+        </li>
+        <li class="mx-4 mb-3 w-full transition duration-300 ease-in-out hover:bg-teal-300 p-2 rounded-lg"><a
+            href="">About</a>
+        </li>
+        <li class="mx-4 mb-3 w-full transition duration-300 ease-in-out hover:bg-teal-300 p-2 rounded-lg"><a
+            href="">Blog</a>
+        </li>
+        <li class="mx-4 mb-3 w-full transition duration-300 ease-in-out hover:bg-teal-300 p-2 rounded-lg"><a
+            href="">Courses</a></li>
+        <li class="mx-4 mb-3 w-full transition duration-300 ease-in-out hover:bg-teal-300 p-2 rounded-lg"><a
+            href="">Contact</a></li>
+      </ul>
+      <hr class="divide-y-2 divide-gray-500 divide-dashed" />
+      <ul class="flex items-center flex-col lg:flex-row text-gray-700 mt-5 lg:mt-0">
+        <li class="mx-4 mb-3"><a href="">Login</a></li>
+        <li class="btn mx-4 mb-3 bg-teal-500 hover:bg-teal-700 rounded-lg px-5 py-2 text-white">
+          <a href="#">Signup</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="home" class="bg-teal-100 mb-5">
+    <div class="text-white flex banner">
+      <div class="bg-cover bg-center w-full z-10" style="background-image: url(./assets/img/home.jpg);">
+        <div class="px-6 w-full md:w-2/5 lg:p-12 text-gray-100 lg:w-1/3">
+          <h1 class="mt-16 lg:mt-0 text-3xl lg:text-4xl">
+            Find Our Best Online Courses & Become the Master
+          </h1>
+          <p class="mt-5 md:mt-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            recusandae aut qui impedit illum.
+          </p>
+        </div>
+        <form class="w-full mt-16 px-6 md:w-1/2 md:mb-64 lg:px-0 lg:ml-12 lg:mb-16 lg:mt-5 lg:w-1/3" action="">
+          <div class="flex">
+            <input type="text"
+              class="text-gray-700 w-full py-2 px-3 justify-center rounded-lg border text-sm placeholder-gray-800 outline-none"
+              placeholder="Search your courses" />
+            <button class="btn bg-teal-500 hover:bg-teal-700 text-gray-100 rounded-md py-2 px-5 ml-1">
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center lg:flex-row lg:justify-around">
+      <div class="flex my-10">
+        <div class="text-teal-700 bg-white rounded-full p-4 mr-5 shadow-lg">
+          <i class="fas fa-medal fa-3x p-2"></i>
+        </div>
+        <div class="flex flex-col items-center">
+          <h1 class="text-4xl text-gray-800 font-extrabold">20,000+</h1>
+          <p class="text-gray-600">Special Courses</p>
+        </div>
+      </div>
+      <div class="flex my-10">
+        <div class="text-teal-700 bg-white rounded-full p-4 mr-5 shadow-lg">
+          <i class="fas fa-user-graduate fa-3x p-2"></i>
+        </div>
+        <div class="flex flex-col items-center">
+          <h1 class="text-4xl text-gray-800 font-extrabold">480,000+</h1>
+          <p class="text-gray-600">Enrolled Students</p>
+        </div>
+      </div>
+      <div class="flex my-10">
+        <div class="text-teal-700 bg-white rounded-full p-4 mr-5 shadow-lg">
+          <i class="fas fa-chalkboard-teacher fa-3x p-2"></i>
+        </div>
+        <div class="flex flex-col items-center">
+          <h1 class="text-4xl text-gray-800 font-extrabold">40,000+</h1>
+          <p class="text-gray-600">Expert Instructors</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses" class="my-12 px-6 lg:px-0">
+    <div class="flex flex-col items-center lg:flex-row lg:justify-between lg:mx-16">
+      <div class="text-3xl font-extrabold my-5">
+        Our Popular Courses
+        <div class="border-b-4 w-20 border-blue-600 pt-3"></div>
+      </div>
+      <div
+        class="btn border-teal-500 hover:bg-teal-500 hover:text-white border text-teal-700 rounded-lg py-3 px-5 mt-5 lg:mt-0">
+        <a class="" href="#">ALL COURSES</a>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center lg:flex-row flex-wrap my-8 justify-center">
+      <!-- Card -->
+      <div class="max-w-sm rounded-lg overflow-hidden shadow-lg my-5 lg:w-1/3 lg:px-5 lg:mx-5">
+        <div class="relative transition duration-500 ease-in-out transform hover:scale-110">
+          <img class="object-cover h-64 w-full rounded-lg" src="./assets/img/course1.jpg"
+            alt="Sunset in the mountains" />
+          <div class="absolute bg-teal-500 text-white rounded-lg -mb-3 py-1 px-2 bottom-0 right-0 mr-6">
+            Free
+          </div>
+        </div>
+        <div class="flex flex-col p-5">
+          <div class="flex items-center text-base font-bold h-12">
+            Tailwind CSS For Modern Website
+          </div>
+          <div class="flex items-center my-3">
+            <div class="mr-3">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+            <small class="text-gray-700">4.8 (2 Rating)</small>
+          </div>
+          <div class="border-b-2 mb-4"></div>
+          <div class="flex justify-between text-gray-700">
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-user text-teal-500"></i>
+              </div>
+              <div>2446</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-clock text-teal-500"></i>
+              </div>
+              <div>12h 28m</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-bookmark text-teal-500"></i>
+              </div>
+              <div>Lectures</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Card -->
+      <!-- Card -->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg my-5 lg:w-1/3 lg:px-5 lg:mx-5">
+        <div class="relative transition duration-500 ease-in-out transform hover:scale-110">
+          <img class="object-cover h-64 w-full rounded-lg" src="./assets/img/course2.jpg"
+            alt="Sunset in the mountains" />
+          <div class="-mb-3 absolute bg-teal-500 text-white rounded-lg py-1 px-2 bottom-0 right-0 mr-6">
+            $10
+          </div>
+        </div>
+        <div class="flex flex-col p-5">
+          <div class="flex items-center text-base font-bold h-12">
+            Javascript For Beginners
+          </div>
+          <div class="flex items-center my-3">
+            <div class="mr-3">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+            </div>
+            <small class="text-gray-700">5.0 (3 Rating)</small>
+          </div>
+          <div class="border-b-2 mb-4"></div>
+          <div class="flex justify-between text-gray-700">
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-user text-teal-500"></i>
+              </div>
+              <div>2446</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-clock text-teal-500"></i>
+              </div>
+              <div>12h 28m</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-bookmark text-teal-500"></i>
+              </div>
+              <div>Lectures</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Card -->
+      <!-- Card -->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg my-5 lg:w-1/3 lg:px-5 lg:mx-5">
+        <div class="relative transition duration-500 ease-in-out transform hover:scale-110">
+          <img class="object-cover h-64 w-full rounded-lg" src="./assets/img/course3.jpg"
+            alt="Sunset in the mountains" />
+          <div class="-mb-3 absolute bg-teal-500 text-white rounded-lg py-1 px-2 bottom-0 right-0 mr-6">
+            Free
+          </div>
+        </div>
+        <div class="flex flex-col p-5">
+          <div class="flex items-center text-base font-bold h-12">
+            React Native 2020
+          </div>
+          <div class="flex items-center my-3">
+            <div class="mr-3">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+            <small class="text-gray-700">4.8 (2 Rating)</small>
+          </div>
+          <div class="border-b-2 mb-4"></div>
+          <div class="flex justify-between text-gray-700">
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-user text-teal-500"></i>
+              </div>
+              <div>2446</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-clock text-teal-500"></i>
+              </div>
+              <div>12h 28m</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-bookmark text-teal-500"></i>
+              </div>
+              <div>Lectures</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Card -->
+      <!-- Card -->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg my-5 lg:w-1/3 lg:px-5 lg:mx-5">
+        <div class="relative transition duration-500 ease-in-out transform hover:scale-110">
+          <img class="object-cover h-64 w-full rounded-lg" src="./assets/img/course4.jpg"
+            alt="Sunset in the mountains" />
+          <div class="-mb-3 absolute bg-teal-500 text-white rounded-lg py-1 px-2 bottom-0 right-0 mr-6">
+            Free
+          </div>
+        </div>
+        <div class="flex flex-col p-5">
+          <div class="flex items-center text-base font-bold h-12">
+            You Don't Know JS
+          </div>
+          <div class="flex items-center my-3">
+            <div class="mr-3">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+            <small class="text-gray-700">4.8 (2 Rating)</small>
+          </div>
+          <div class="border-b-2 mb-4"></div>
+          <div class="flex justify-between text-gray-700">
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-user text-teal-500"></i>
+              </div>
+              <div>2446</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-clock text-teal-500"></i>
+              </div>
+              <div>12h 28m</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-bookmark text-teal-500"></i>
+              </div>
+              <div>Lectures</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Card -->
+      <!-- Card -->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg my-5 lg:w-1/3 lg:px-5 lg:mx-5">
+        <div class="relative transition duration-500 ease-in-out transform hover:scale-110">
+          <img class="object-cover h-64 w-full rounded-lg" src="./assets/img/course5.jpg"
+            alt="Sunset in the mountains" />
+          <div class="-mb-3 absolute bg-teal-500 text-white rounded-lg py-1 px-2 bottom-0 right-0 mr-6">
+            $20
+          </div>
+        </div>
+        <div class="flex flex-col p-5">
+          <div class="flex items-center text-base font-bold h-12">
+            Building Web App With MEAN (MongoDB, Express, Angular, Node JS)
+          </div>
+          <div class="flex items-center my-3">
+            <div class="mr-3">
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star text-yellow-500"></i>
+              <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+            <small class="text-gray-700">4.8 (2 Rating)</small>
+          </div>
+          <div class="border-b-2 mb-4"></div>
+          <div class="flex justify-between text-gray-700">
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-user text-teal-500"></i>
+              </div>
+              <div>2446</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-clock text-teal-500"></i>
+              </div>
+              <div>12h 28m</div>
+            </div>
+            <div class="flex">
+              <div class="mr-2">
+                <i class="far fa-bookmark text-teal-500"></i>
+              </div>
+              <div>Lectures</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Card -->
+    </div>
+  </section>
+
+  <section id="instructor" class="bg-blue-100 py-5 px-6 my-12 relative">
+    <img class="absolute bottom-0 right-0 opacity-25 hidden lg:block z-10" src="/img/dot pattern.png" alt=""
+      width="250" />
+    <div class="flex flex-col lg:flex-row w-full">
+      <div class="flex flex-col w-full lg:w-1/2 lg:m-24 lg:py-12">
+        <h1 class="text-2xl lg:text-4xl font-bold">
+          Find Your Students For Teaching
+        </h1>
+        <div class="border-b-4 w-20 border-blue-600 pt-3"></div>
+        <p class="my-10">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
+          ut iste, magni expedita adipisci error illo consectetur nihil
+          corrupti maxime rem tempora cumque commodi modi enim sit velit
+          placeat officiis dicta facilis quidem architecto ipsum!
+        </p>
+        <div
+          class="btn py-3 text-center border border-teal-600 hover:bg-teal-600 hover:text-white text-teal-600 w-48 rounded-lg">
+          <a href="" class="">Become a Instructor</a>
+        </div>
+      </div>
+      <div class="lg:w-1/2 m-24 hidden lg:block z-20">
+        <img class="rounded-lg" src="./assets/img/instructor.jpg" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section id="feedback" class="my-12 px-6">
+    <div class="flex flex-col lg:flex-row w-full">
+      <div class="flex flex-col w-full lg:w-1/2 order-2 lg:mt-24 lg:mx-12">
+        <div class="text-2xl lg:text-4xl font-bold">Students Feedback</div>
+        <div class="border-b-4 w-20 border-blue-600 pt-3"></div>
+        <div class="flex items-center my-6">
+          <div class="mr-4">
+            <img class="rounded-full h-16 w-16" src="./assets/img/instructor.jpg" alt="" />
+          </div>
+          <div class="flex flex-col">
+            <div class="text-lg font-bold">Washington Sundar</div>
+            <small class="text-sm text-gray-600">Student Of We-Learn</small>
+          </div>
+        </div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum vitae
+          quo dicta error sit ab sequi cumque enim quaerat nobis vel
+          voluptatem minima ea ipsam ipsa, aspernatur veniam delectus, vero
+          expedita ullam harum voluptas deleniti.
+        </div>
+        <div class="flex justify-end mt-5">
+          <div><i class="fas fa-arrow-left text-blue-700"></i></div>
+          <div class="mx-8">
+            <i class="fas fa-arrow-right text-blue-700"></i>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2 mx-24 my-12 hidden lg:block z-20 order-1">
+        <img class="rounded-lg" src="./assets/img/instructor.jpg" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="bg-blue-100 py-5 px-6 my-12">
+    <div class="flex justify-between lg:mx-12">
+      <div>
+        <div class="font-bold text-2xl lg:text-4xl">
+          Our Latest Blog
+        </div>
+        <div class="border-b-4 w-20 border-blue-600 pt-3"></div>
+      </div>
+      <div class="flex items-center">
+        <div><i class="fas fa-arrow-left text-blue-700"></i></div>
+        <div class="mx-8">
+          <i class="fas fa-arrow-right text-blue-700"></i>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center lg:flex-row flex-wrap my-8 justify-center">
+      <!-- Card -->
+      <div class="max-w-sm rounded-lg overflow-hidden shadow-lg my-5 lg:w-1/3 lg:px-5 lg:mx-5">
+        <div class="transition duration-500 ease-in-out transform hover:scale-110">
+          <img class="object-cover h-64 w-full rounded-lg" src="./assets/img/blog1.jpg" alt="Sunset in the mountains" />
+        </div>
+        <div class="flex flex-col p-5">
+          <div class="flex text-gray-700">
+            <small class="mr-8">April 22,2020</small>
+            <small>4 Comments</small>
+          </div>
+          <div class="flex items-center text-base font-bold h-12 my-3">
+            Numquam eligendi aperiam quis.
+          </div>
+          <small class="font-medium text-xs text-blue-600">
+            <a href="#">READ MORE...</a>
+          </small>
+        </div>
+      </div>
+      <!-- /Card -->
+      <!-- Card -->
+      <div class="max-w-sm rounded-lg overflow-hidden shadow-lg my-5 lg:w-1/3 lg:px-5 lg:mx-5">
+        <div class="transition duration-500 ease-in-out transform hover:scale-110">
+          <img class="object-cover h-64 w-full rounded-lg" src="./assets/img/blog2.jpg" alt="Sunset in the mountains" />
+        </div>
+        <div class="flex flex-col p-5">
+          <div class="flex text-gray-700">
+            <small class="mr-8">April 22,2020</small>
+            <small>4 Comments</small>
+          </div>
+          <div class="flex items-center text-base font-bold h-12 my-3">
+            consectetur adipisicing elit. Sapiente corrupt...
+          </div>
+          <small class="font-medium text-xs text-blue-600">
+            <a href="#">READ MORE...</a>
+          </small>
+        </div>
+      </div>
+      <!-- /Card -->
+      <!-- Card -->
+      <div class="max-w-sm rounded-lg overflow-hidden shadow-lg my-5 lg:w-1/3 lg:px-5 lg:mx-5">
+        <div class="transition duration-500 ease-in-out transform hover:scale-110">
+          <img class="object-cover h-64 w-full rounded-lg" src="./assets/img/blog3.jpg" alt="Sunset in the mountains" />
+        </div>
+        <div class="flex flex-col p-5">
+          <div class="flex text-gray-700">
+            <small class="mr-8">April 22,2020</small>
+            <small>4 Comments</small>
+          </div>
+          <div class="flex items-center text-base font-bold h-12 my-3">
+            Lorem ipsum dolor sit amet.
+          </div>
+          <small class="font-medium text-xs text-blue-600">
+            <a href="#">READ MORE...</a>
+          </small>
+        </div>
+      </div>
+      <!-- /Card -->
+    </div>
+  </section>
+
+  <section id="newsletter" class="py-5 px-6 my-12">
+    <div class="flex flex-col items-center text-center">
+      <div class="mb-5 font-bold text-2xl lg:text-4xl">
+        Subscribe Newsletter
+      </div>
+      <p class="lg:w-1/2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+        voluptatem obcaecati deleniti qui distinctio provident quae debitis
+        rem corporis atque!
+      </p>
+      <form class="w-full md:w-1/2 my-12" action="">
+        <div class="flex py-2">
+          <input type="text"
+            class="text-gray-700 w-full py-2 px-3 justify-center rounded-lg border text-sm placeholder-gray-800 outline-none"
+            placeholder="Enter Your Email Address" />
+          <button class="btn bg-teal-500 hover:bg-teal-700 text-gray-100 rounded-md py-2 px-5 ml-1">
+            Subscribe
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="footer" class="bg-blue-100 py-12 px-6 mt-12">
+    <footer>
+      <div class="flex flex-wrap items-center px-6 md:flex-no-wrap md:px-0">
+        <div class="flex flex-col w-1/2">
+          <div class="font-bold text-lg text-gray-700 -mt-12 pb-5">
+            W/e-Learn
+          </div>
+          <div class="flex flex-col leading-loose text-xs lg:text-sm text-gray-700">
+            <small>Designed By Milton Debnath</small>
+            <small>Developed By Riki Febrianto</small>
+          </div>
+        </div>
+        <div class="flex flex-col w-1/2">
+          <div class="flex flex-col items-end md:items-start">
+            <ul class="text-sm text-gray-700">
+              <div class="font-bold text-lg my-6">
+                Home
+              </div>
+              <div class="leading-loose">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Our Process</li>
+                <li>Services</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col w-1/2">
+          <div class="flex flex-col">
+            <ul class="text-sm text-gray-700">
+              <div class="font-bold text-lg my-6">
+                Latest Course
+              </div>
+              <div class="leading-loose">
+                <li>General Science</li>
+                <li>Web Development</li>
+                <li>Civil Engineering</li>
+                <li>Business Studies</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col w-1/2">
+          <div class="flex flex-col items-end md:items-start">
+            <ul class="text-sm text-gray-700">
+              <div class="font-bold text-lg my-6">
+                Community
+              </div>
+              <div class="leading-loose">
+                <li>Go Premium</li>
+                <li>Team Plans</li>
+                <li>Refer a Friend</li>
+                <li>Gift Cards</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col w-1/2">
+          <div class="flex flex-col">
+            <ul class="text-sm text-gray-700">
+              <div class="font-bold text-lg my-6">
+                Stay Connected
+              </div>
+              <div class="leading-loose">
+                <li class="flex justify-start items-center">
+                  <i class="fab fa-twitter pr-3"></i><a href="#">Twitter</a>
+                </li>
+                <li class="flex justify-start items-center">
+                  <i class="fab fa-instagram pr-3"></i><a href="#">Instagram</a>
+                </li>
+                <li class="flex justify-start items-center">
+                  <i class="fab fa-youtube pr-2"></i><a href="#">Youtube</a>
+                </li>
+                <li>.</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <script>
+    let nav = document.querySelector('#nav');
+    let toggle = document.getElementById('toggle');
+
+    toggle.addEventListener('click', (e) => {
+      nav.classList.toggle('nav');
+      nav.classList.toggle('show');
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/3f18385c23.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

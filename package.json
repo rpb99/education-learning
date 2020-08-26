@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "tailwindcss": "^1.7.3"
+  },
+  "name": "online-education-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Riki",
+  "license": "MIT"
+}
